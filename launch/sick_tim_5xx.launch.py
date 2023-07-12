@@ -17,7 +17,7 @@ def generate_launch_description():
         # executable='sick_generic_caller',          # Please use executable='sick_generic_caller', if ROS2 can't launch sick_generic_caller.
         output="screen",
         parameters=[config],
-        remappings=[("scan", "scan_unfiltered")],
+        remappings=[("scan", "raw_laser")],
     )
     ld.add_action(node)
     return ld
